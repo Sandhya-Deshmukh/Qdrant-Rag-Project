@@ -1,0 +1,7 @@
+React Native is used for mobile apps.
+
+Python is popular in AI.
+
+Transformers are used in Large Language Models.
+
+Qdrant is a vector database.
