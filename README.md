@@ -37,16 +37,23 @@ python3 search.py
 ```
 Searches Qdrant directly without an LLM — returns raw matching chunks.
 
-### 6. Run the full RAG pipeline
+### 6. Run the full RAG pipeline (terminal)
 ```bash
 python3 langchain_qdrant.py
 ```
 Retrieves relevant chunks from Qdrant and passes them to `flan-t5-base` to generate an answer.
 
+### 7. Run the Web UI
+```bash
+streamlit run app.py
+```
+Opens a browser interface at **http://localhost:8501** where you can type a query and see the LLM answer and source chunks.
+
 ## Project Flow
 ```
 notes.txt → ingest.py → Qdrant (vector store)
                               ↓
-query → langchain_qdrant.py → retriever → flan-t5-base → answer
+query → app.py (browser UI) → retriever → flan-t5-base → answer
+      → langchain_qdrant.py (terminal)
 ```
 
